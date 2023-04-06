@@ -1,9 +1,13 @@
+env:
+    TOKEN: "ENCRYPTED[764b9f896d54ac38169a733bd834ae7e825517dbcab606c864319bbe809785c2e56753ddeccb9ea0576241aaf65b90a5]"
+    CID: "ENCRYPTED[bc48ec8b138dd433add927d60c6019d0d450de4292eaafaec911593559276e4af37327ffbcb040cd589ed65f49bbdc3e]"
+
 task:
   name: "Kernel deploy.."
   timeout_in: 120m
   container:
       image: nexgang/ubuntu:latest
-      cpu: 6
+      cpu: 8
       memory: 16G
       stateful: true
       greedy: true
