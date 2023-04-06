@@ -13,5 +13,6 @@ task:
       greedy: true
 
   Build_script:
+      - sudo ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
       - git clone --depth=1 -b Tanya https://github.com/AnggaR96s/kernel_xiaomi_joyeuse kernel && cd kernel
       - /noclone3 bash build.sh
