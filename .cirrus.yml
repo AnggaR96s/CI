@@ -1,0 +1,13 @@
+task:
+  name: "Kernel deploy.."
+  timeout_in: 120m
+  container:
+      image: nexgang/ubuntu:latest
+      cpu: 4
+      memory: 16G
+      stateful: true
+      greedy: true
+
+  Build_script:
+      - git clone --depth=1 -b Tanya https://github.com/AnggaR96s/kernel_xiaomi_joyeuse kernel && cd kernel
+      - /noclone3 bash build.sh
