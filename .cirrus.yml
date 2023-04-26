@@ -8,11 +8,11 @@ task:
   container:
       image: nexgang/ubuntu:latest
       cpu: 8
-      memory: 16G
+      memory: 8G
       stateful: true
       greedy: true
 
   Build_script:
-      - sudo ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
-      - git clone --depth=1 -b Tanya https://github.com/AnggaR96s/kernel_xiaomi_joyeuse kernel && cd kernel
+      - sudo timedatectl set-timezone 'Asia/Jakarta'
+      - git clone --depth=1 -b Tanya https://github.com/jandaX/android_kernel_xiaomi_joyeus kernel && cd kernel
       - /noclone3 bash build.sh
