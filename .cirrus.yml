@@ -13,6 +13,5 @@ task:
       greedy: true
 
   Build_script:
-      - timedatectl set-timezone 'Asia/Jakarta'
-      - git clone --depth=1 -b Tanya https://github.com/jandaX/android_kernel_xiaomi_joyeus kernel && cd kernel
+      - git clone --depth=1 -b Tanya https://github.com/jandaX/android_kernel_xiaomi_joyeuse kernel && cd kernel
       - /noclone3 bash build.sh
